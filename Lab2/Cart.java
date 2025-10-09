@@ -37,11 +37,11 @@ public class Cart {
 	        for (int i = found; i < qtyOrdered - 1; i++) {
 	            itemsOrdered[i] = itemsOrdered[i + 1];
 	        }
-	        itemsOrdered[qtyOrdered - 1] = null; // Clear the last element
+	        itemsOrdered[qtyOrdered - 1] = null;
 	        qtyOrdered--;
-	        System.out.println("The disc \"" + disc.getTitle() + "\" has been removed.");
+	        System.out.println("The disc " + disc.getTitle() + " has been removed.");
 	    } else {
-	        System.out.println("The disc \"" + disc.getTitle() + "\" is not found in the cart.");
+	        System.out.println("The disc " + disc.getTitle() + " is not found in the cart.");
 	    }
 	}
 	

@@ -14,6 +14,7 @@ public class Aims {
 		System.out.println("Total cost is: ");
 		System.out.println(anOrder.totalCost());
 		
+		anOrder.removeDigitalVideoDisc(dvd1);
 
 	}
 
