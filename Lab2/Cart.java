@@ -4,9 +4,9 @@ public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private static DigitalVideoDisc itemsOrdered[] = 
 			new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-	private static int qtyOrdered = 0;
+	private int qtyOrdered = 0;
 	
-	public static void addDigitalVideoDisc(DigitalVideoDisc disc) {
+	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
 		if (qtyOrdered < 20) {
 			itemsOrdered[qtyOrdered] = disc;
 			System.out.println("The disc " + disc.getTitle() + " has been added");
@@ -21,7 +21,7 @@ public class Cart {
 
 	}
 	
-	public static void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		if (qtyOrdered == 0) {
 			System.out.println("The cart is empty");
 			return;
@@ -45,7 +45,7 @@ public class Cart {
 	    }
 	}
 	
-	public static float totalCost() {
+	public float totalCost() {
 		float total = 0;
 		for (int i = 0; i < qtyOrdered; i++) {
 			if (itemsOrdered[i] != null) {
